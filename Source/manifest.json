@@ -1,15 +1,21 @@
 {
-	"manifest_version": 2,
-	"name": "Cloud To Butt",
-	"version": "1.0",
-	"description": "Replaces the text 'the cloud' with 'my butt'.",
-	"content_scripts": 
-	[
-		{
-			"matches": ["*://*/*"],
-			"js": ["content_script.js"],
-			"run_at": "document_end"
+    "manifest_version": 2,
+    "name": "Blackmetalise",
+    "version": "1.0",
+    "description": "Makes the internet more kvlt",
+    "browser_action": {
+        "default_icon": "icon19.png",
+        "default_popup": "popup.html"
+    },
+    "background":{"scripts":["background.js"]},
+    "permissions": ["activeTab"],
+    "icons": {"128": "icon128.png" },
+    "content_scripts": [
+        {
+            "matches": ["*://*/*"],
+            "js": ["content_script.js"],
+            //"css": ["restyle.css"],
+            "run_at": "document_end"
 		}
 	]
 }
-
